@@ -1,0 +1,52 @@
+@keyframes spin {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+  transform: translateZ(-10px) scale(2);
+}
+
+.title {
+  font-size: 9rem;
+  color: white;
+  text-shadow: 0 0 5px #00adb5;
+}
+
+section {
+  font-size: 1.5rem;
+  background-color: #393e46;
+  color: white;
+}
